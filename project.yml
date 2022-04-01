@@ -1,0 +1,61 @@
+---
+settings:
+  name: Ransomware Protection
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-cn,us-en,ja-jp,ko-kr
+sidebar:
+  entries:
+  - title: 所有 Cloud Manager 文档
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: 勒索软件保护文档
+    url: "/index.html"
+  - title: 发行说明
+    url: "/whats-new.html"
+  - title: 入门
+    entries:
+    - title: 了解勒索软件保护
+      url: "/concept-ransomware-protection.html"
+  - title: 使用勒索软件保护
+    entries:
+    - title: 管理数据的网络安全建议
+      url: "/task-analyze-ransomware-data.html"
+  - title: 知识和支持
+    entries:
+    - title: 注册以获得支持
+      url: "/task-support-registration.html"
+    - title: 获取帮助
+      url: "/task-get-help.html"
+  - title: 法律声明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 入门
+    links:
+    - title: 了解勒索软件保护
+      url: concept-ransomware-protection.html
+    - title: 新增功能
+      url: whats-new.html
+  - title: 管理网络安全建议
+    links:
+    - title: 按数据敏感度查看排名靠前的数据存储库
+      url: task-analyze-ransomware-data.html#top-data-repositories-by-data-sensitivity
+    - title: 查看已添加到域管理员组的用户
+      url: task-analyze-ransomware-data.html#domain-administrator-group-control
+    - title: 查看按打开权限列出的数据
+      url: task-analyze-ransomware-data.html#data-listed-by-types-of-open-permissions
+    - title: 查看按加密文件列出的数据
+      url: task-analyze-ransomware-data.html#data-listed-by-encrypted-files
+  - title: 博客社区
+    links:
+    - title: NetApp 社区
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central 博客
+      url: https://cloud.netapp.com/blog
+    - title: 云网络研讨会
+      url: https://cloud.netapp.com/events
+product-family: {}
