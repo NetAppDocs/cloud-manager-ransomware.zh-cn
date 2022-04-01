@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>管理数据源的网络安全建议 | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="管理数据源的网络安全建议 | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/cloud-manager-ransomware/task-analyze-ransomware-data.html" />
+	<meta property="og:description" content="使用勒索软件保护信息板查看所有工作环境和数据源的网络弹性概况。您可以深入查看每个区域，以了解更多详细信息和可能的修复方法。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/cloud-manager-ransomware/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="使用勒索软件保护信息板查看所有工作环境和数据源的网络弹性概况。您可以深入查看每个区域，以了解更多详细信息和可能的修复方法。">
+  <meta name="keywords" content=" personal data, personal information, sensitive, personal sensitive data, governance, data sense, ransomware, ransomware protection, cyberstorage, cyber attack, cybersecurity, permissions"><!-- Icons -->
+  <link rel="icon" href="/zh-cn/cloud-manager-ransomware/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/zh-cn/cloud-manager-ransomware/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/cloud-manager-ransomware/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/cloud-manager-ransomware/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/cloud-manager-ransomware/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-cn/cloud-manager-ransomware/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-cn/cloud-manager-ransomware/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-cn/cloud-manager-ransomware/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-ransomware/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-ransomware/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/cloud-manager-ransomware/css/tabbed-blocks.css" type="text/css">
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-ransomware/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><link rel="stylesheet" href='/zh-cn/cloud-manager-ransomware/css/product-family.css' type="text/css">
+  <script src='/zh-cn/cloud-manager-ransomware/js/product-family.js'></script><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/cloud-manager-ransomware/js/na-search.js'></script><script src='/zh-cn/cloud-manager-ransomware/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/cloud-manager-ransomware/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/cloud-manager-ransomware/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-cn/cloud-manager-ransomware/js/na-utility.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/toc.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/version-dropdown.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/jszip.min.js'></script>
+  <script src='/zh-cn/cloud-manager-ransomware/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ransomware/issues/new?body=Page%3A%20[管理数据源的网络安全建议](https://docs.netapp.com/zh-cn/cloud-manager-ransomware/task-analyze-ransomware-data.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/cloud-manager-ransomware/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ransomware/blob/main/task-analyze-ransomware-data.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/cloud-manager-ransomware/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/cloud-manager-ransomware/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">产品和解决方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支持和培训</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">云中心</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社区</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">日志</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客户案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/cloud-manager-ransomware/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">简体中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/cloud-manager-ransomware/task-analyze-ransomware-data.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/cloud-manager-ransomware/task-analyze-ransomware-data.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/cloud-manager-ransomware/task-analyze-ransomware-data.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/zh-cn/cloud-manager-ransomware/pdfs/fullsite-sidebar/勒索软件保护文档.pdf" >
+          <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/cloud-manager-ransomware/pdfs/sidebar/入门.pdf" 
+            
+          >
+            <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>
+            入门
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/cloud-manager-ransomware/pdfs/sidebar/使用勒索软件保护.pdf" 
+            
+          >
+            <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>
+            使用勒索软件保护
+          </a>
+          
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/cloud-manager-ransomware/pdfs/pages/task-analyze-ransomware-data.pdf" >
+    <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/cloud-manager-ransomware/pdfs/sidebar/知识和支持.pdf" 
+            
+          >
+            <img src="/zh-cn/cloud-manager-ransomware/images/pdf.png" width="16" height="16"/>
+            知识和支持
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-cn/cloud-manager-ransomware/images/pdf-zip.png" width="16" height="16"/>
+      <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-manager-family">
+        所有 Cloud Manager 文档
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/index.html">
+        勒索软件保护文档
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/whats-new.html">
+        发行说明
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 入门</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/concept-ransomware-protection.html">
+        了解勒索软件保护
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 使用勒索软件保护</div>
+      </a>
+      <ul><li class="  active "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/task-analyze-ransomware-data.html">
+        管理数据的网络安全建议
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 知识和支持</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/task-support-registration.html">
+        注册以获得支持
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/task-get-help.html">
+        获取帮助
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/cloud-manager-ransomware/legal-notices.html">
+        法律声明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/zh-cn/cloud/">云文档</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-cn/cloud-manager-ransomware/">Ransomware&nbsp;Protection</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">管理数据源的网络安全建议</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-01 18:27:16 +0000">04/01/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>使用勒索软件保护信息板查看所有工作环境和数据源的网络弹性概况。您可以深入查看每个区域，以了解更多详细信息和可能的修复方法。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_dashboard.png" alt="勒索软件保护信息板的屏幕截图。"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="网络弹性映射">网络弹性映射</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>网络弹性映射是信息板中的主要区域。通过它，您可以直观地查看所有工作环境和数据源，并查看相关的网络弹性信息。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_cyber_map.png" alt="勒索软件保护信息板上的网络弹性映射屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>该映射由三部分组成：</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">左侧面板</dt>
+<dd>
+<p>显示服务在所有数据源中监控的警报列表。它还指示环境中处于活动状态的每个特定警报的数量。拥有大量一种类型的警报可能是尝试首先解决这些警报的一个很好的原因。</p>
+</dd>
+<dt class="hdlist1">中央面板</dt>
+<dd>
+<p>以图形格式显示所有数据源，服务和 Active Directory 。运行状况良好的环境会显示绿色指示符，而发出警报的环境会显示红色指示符。</p>
+</dd>
+<dt class="hdlist1">右侧面板</dt>
+<dd>
+<p>单击带有红色指示符的数据源后，此面板将显示该数据源的警报并提供解决警报的建议。对警报进行排序，以便首先列出最新的警报。许多建议都会引导您使用另一个 Cloud Manager 服务来解决问题描述 问题。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>这些警报是当前跟踪的警报和建议的修复方法。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">警报</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">修复</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">检测到高数据加密率</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">数据源中加密文件或损坏文件的百分比异常增加。这意味着过去 7 天加密文件的百分比增加了 20% 以上。例如，如果 50% 的文件已加密，则此数字会在一天之后增加到 60% ，您将看到此警报。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击链接以启动 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html" target="_blank" rel="noopener">"数据感知调查页面"</a>。您可以在此处为特定的 _工作 环境 _ 和 _类别 （加密和损坏） _ 选择筛选器，以查看所有加密和损坏文件的列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">发现具有广泛权限的敏感数据</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在文件中发现敏感数据，而在数据源中，访问权限级别太高。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击链接以启动 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html" target="_blank" rel="noopener">"数据感知调查页面"</a>。您可以在此处选择特定 <em>WorkEnvironment ， _Sensitivity Level （ Sensitive Personal ） _ 和 _Open Permissions</em> 的筛选器，以查看具有此问题描述 的文件列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个或多个卷不会使用 Cloud Backup 进行备份</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">工作环境中的某些卷未使用进行保护 <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html" target="_blank" rel="noopener">"云备份"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击链接启动 Cloud Backup ，然后您可以确定工作环境中未备份的卷，然后确定是否要在这些卷上启用备份。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data sense 不会扫描数据源中的一个或多个存储库（卷，存储分段等）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">您的数据源中的某些数据未使用进行扫描 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html" target="_blank" rel="noopener">"云数据感知"</a> 确定合规性和隐私问题并寻找优化机会。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接可启动 Data sense 并为未扫描的项目启用扫描和映射。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">您的 ONTAP 系统未加固</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 系统中的某些设置未按照中的建议进行设置 <a href="https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf">"《适用于 ONTAP 系统的 NetApp 安全加固指南》"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接，您将重定向到 <a href="#Status of ONTAP systems hardening">强化 ONTAP 环境面板</a> 下面，您可以调查哪个问题描述 导致警报以及如何以最佳方式修复问题描述 。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="按数据敏感度排名前几位的数据存储库">按数据敏感度排名前几位的数据存储库</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Top Data Repository by Sensitivity level_ 面板最多可列出包含最敏感项目的前四个数据存储库（工作环境和数据源）。每个工作环境的条形图分为：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>非敏感数据</p>
+</li>
+<li>
+<p>个人数据</p>
+</li>
+<li>
+<p>敏感的个人数据</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_sensitivity.png" alt="勒索软件保护信息板上的数据敏感度图表的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>您可以将鼠标悬停在每个部分上以查看每个类别中的项目总数。</p>
+</div>
+<div class="paragraph">
+<p>单击每个区域以在 " 数据感知调查 " 页面中查看筛选后的结果，以便您可以进一步调查。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="域管理员组控制">域管理员组控制</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>域管理员组控制面板显示最近五个已添加到域管理员组中的用户，以便您可以查看是否应允许这些组中的所有用户。您必须拥有 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-add-active-directory-datasense.html" target="_blank" rel="noopener">"集成了全局 Active Directory"</a> 进入 Cloud Data sense ，以使此面板处于活动状态。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_domain_admin.png" alt="勒索软件保护信息板上已添加为域管理员的用户的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>默认管理管理组包括 " 管理员 " ， " 域管理员 " ， " 企业管理员 " ， " 企业密钥管理员 " 和 " 密钥管理员 " 。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="按打开权限类型列出的数据">按打开权限类型列出的数据</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>_Open Permissions_panel 会显示正在扫描的所有文件中存在的每种权限的百分比。此图表来自 Data sense ，其中显示了以下类型的权限：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>无开放访问</p>
+</li>
+<li>
+<p>对组织开放</p>
+</li>
+<li>
+<p>打开公有</p>
+</li>
+<li>
+<p>未知访问</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_permissions.png" alt="勒索软件保护信息板上的加密文件图表的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>您可以将鼠标悬停在每个部分上以查看每个类别中的文件百分比和总数。</p>
+</div>
+<div class="paragraph">
+<p>单击每个区域以在 " 数据感知调查 " 页面中查看筛选后的结果，以便您可以进一步调查。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="按加密文件列出的数据">按加密文件列出的数据</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>" 已加密文件 " 面板显示经过加密的文件百分比最高的前 4 个数据源。这些通常是受密码保护的项。为此，它会比较过去 7 天的加密速率，以确定哪些数据源的增长率超过 20% 。增加此数量可能意味着勒索软件已攻击您的系统。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_encrypt_files.png" alt="勒索软件保护信息板上的加密文件图表的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>单击其中一个数据源对应的行可在 " 数据感知调查 " 页面中查看经过筛选的结果，以便您可以进一步调查。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ontap-系统强化状态">ONTAP 系统强化状态</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>增强 ONTAP 环境 _ 面板可提供 ONTAP 系统中某些设置的状态，这些设置可根据跟踪部署的安全性 <a href="https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf">"《适用于 ONTAP 系统的 NetApp 安全加固指南》"</a> 和 <a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html">"ONTAP 防勒索软件功能"</a> 主动检测异常活动并发出警告。</p>
+</div>
+<div class="paragraph">
+<p>您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。此面板目前支持内部 ONTAP 和 Cloud Volumes ONTAP 系统。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_harden_ontap.png" alt="勒索软件保护信息板上的 ONTAP 强化状态屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>正在跟踪的设置包括：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">强化目标</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">修复</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">即装即用的反勒索软件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已激活机载反勒索软件的卷的百分比。仅适用于内部 ONTAP 系统。绿色状态图标表示已启用超过 85% 的卷。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure">"了解如何在卷上启用反勒索软件"</a> 使用 System Manager 。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 版本</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">集群上安装的 ONTAP 软件版本。绿色状态图标表示此版本为最新版本。黄色图标表示集群在内部系统中落后于 1 或 2 个修补版本或 1 个次要版本，而在其他系统中则落后于 1 个主要版本。红色图标表示集群后面有 3 个修补版本， 2 个次要版本， 1 个主要版本（内部系统），后面有 2 个主要版本（其他系统）。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/setup-upgrade/index.html">"了解升级内部集群的最佳方式"</a> 或 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task_updating_ontap_cloud.html">"您的 Cloud Volumes ONTAP 系统"</a>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">快照</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否已在数据卷上激活快照功能，以及具有 Snapshot 副本的卷百分比。绿色状态图标表示超过 85% 的卷已启用快照。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html">"请参见如何在内部集群上启用快照"</a> 或 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task_managing_storage.html#managing-existing-volumes">"在 Cloud Volumes ONTAP 系统上"</a>。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>您可以单击 Cloud Backup 按钮为卷激活备份，或者单击 Data sense 按钮扫描集群上的卷以调查合规性和监管合规性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="关键业务数据的权限状态">关键业务数据的权限状态</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>业务关键型数据权限分析面板可显示业务关键型数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_critical_permissions.png" alt="勒索软件保护信息板上您正在管理的数据的权限状态屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>最初，此面板没有数据，因为只有在您选择了为查看最关键的业务数据而创建的 Data sense <em>policies</em> 之后，才会填充数据。请参见操作说明 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#creating-custom-policies">"使用 Data sense 创建策略"</a>。</p>
+</div>
+<div class="paragraph">
+<p>在此面板中添加最多 2 个策略后，此图将显示符合策略标准的所有数据的权限分析。其中列出了以下项的数量：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open to 公有 权限— Data sense 认为对公有 开放的项</p>
+</li>
+<li>
+<p>开放给组织权限— Data sense 认为对组织开放的项</p>
+</li>
+<li>
+<p>无打开权限— Data sense 视为无打开权限的项</p>
+</li>
+<li>
+<p>未知权限— Data sense 视为未知权限的项</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将鼠标悬停在图表中的每个条上可查看每个类别中的结果数。单击一个栏，此时将显示 "Data sense 调查 " 页面，以便您可以进一步调查哪些项具有打开权限，以及是否应对文件权限进行任何调整。</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/cloud-manager-ransomware/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">想就我们的网站提供反馈?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">请告诉我们</a>
+  <a href="https://docs.netapp.com/zh-cn/announcements/" class="n-footer__copyright">通知</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/cloud-manager-ransomware/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/cloud-manager-ransomware/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/cloud-manager-ransomware/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/cloud-manager-ransomware/js/www-ntap.js'></script>
+    <script src='/zh-cn/cloud-manager-ransomware/js/tabbed-blocks.js'></script>
+  </body></html>
