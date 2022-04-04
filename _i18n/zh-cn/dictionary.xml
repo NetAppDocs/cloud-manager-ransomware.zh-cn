@@ -2,25 +2,13 @@
 <blocks>
   <block id="d759e97ebb04097c8dee30fc845cc996" category="summary">了解勒索软件保护的新增功能。</block>
   <block id="ca151642aca499fd94ee2307ea084a75" category="doc">勒索软件保护的新增功能</block>
-  <block id="08abc76a49b9efe7014212c98d534e6d" category="section-title">2021 年 4 月 5 日</block>
-  <block id="55a52ff3da54b1be61be4ffbf282e94a" category="section-title">用于跟踪 ONTAP 环境安全性强化情况的新面板。</block>
-  <block id="9c7ce6244ca9eb3215d61dd69afa3325" category="inline-link">《适用于 ONTAP 系统的 NetApp 安全加固指南》</block>
-  <block id="3380ed6ae32f99410860532de07b57a7" category="inline-link">ONTAP 防勒索软件功能</block>
-  <block id="c0920e0c17ca7e741f375b33ea0a761b" category="paragraph">一个新面板 " 强化 ONTAP 环境 " 可提供 ONTAP 系统中某些设置的状态，用于根据跟踪部署的安全性<block ref="060f8a2b53a60ac49c67caafaf5b129f" category="inline-link-rx"></block> 和<block ref="0be7bd5b5f280e211653a4c6e05c11a6" category="inline-link-rx"></block> 主动检测异常活动并发出警告。</block>
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link-macro">有关详细信息，请访问此处</block>
-  <block id="d1cc60fc49a33e0ae7d36cae499efb4f" category="paragraph">您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。 <block ref="00ea4aec7331e5df57914a41d75be7a8" category="inline-link-macro-rx"></block>。</block>
-  <block id="76553642514a4b204c12afe14df42e92" category="section-title">新面板可显示如何使用 Cloud Backup 保护不同类别的数据。</block>
-  <block id="14a55b39be461472bba9909669aa45c0" category="paragraph">这一全新的 " 备份状态 " 面板显示了在因勒索软件攻击而需要恢复时，您最重要的数据类别的备份程度如何全面。此数据直观地展示了 Cloud Backup 在环境中备份的特定类别项目数量。</block>
-  <block id="02b53084641511d7c2b0f7b7b494c38a" category="section-title">2022 年 3 月 15 日</block>
   <block id="70ca849e4710f5c98451b61f2b47e5a8" category="section-title">用于跟踪业务关键型数据的权限状态的新面板</block>
-  <block id="45c9cbfc62a358ed88da671670148ce0" category="paragraph">新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。 <block ref="c07bc80d4be5873f25bb0a279dd82cd2" category="inline-link-macro-rx"></block>。</block>
   <block id="1029db4aa82b2fd39d624a6eda513d6c" category="section-title">现在， " 打开权限 " 区域包括 OneDrive 和 SharePoint 帐户</block>
   <block id="52a3db95e0c303b6251e8f60de3b3f3d" category="paragraph">现在，勒索软件保护信息板中的 " 打开权限 " 区域包含对 OneDrive 帐户和 SharePoint 帐户中正在扫描的文件的现有权限。</block>
-  <block id="9fe54dabf8677a2dd216b421ca613a20" category="section-title">2022 年 2 月 9 日</block>
   <block id="67ecb98d51fb7fee47f7f4c979becfa6" category="section-title">全新的勒索软件保护服务</block>
   <block id="c05006d715a916b10a4f130817c81c90" category="paragraph">通过全新的勒索软件保护服务，您可以查看有关网络安全的相关信息，并评估数据对网络攻击的弹性。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。</block>
   <block id="7e0c2cf881384db7bfcfb883b67871a5" category="inline-link-macro">了解有关此新服务的更多信息</block>
-  <block id="07af92e755dcb6b8c74060d22fcc7077" category="paragraph"><block ref="12a8d1a9d44e422c8f9c04ab83945381" category="inline-link-macro-rx"></block>。</block>
   <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp 通过多种方式为 Cloud Manager 提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link-macro"></block>
@@ -59,10 +47,6 @@
   <block id="d882bf73cd5caf1e5aa39edbf893ad74" category="inline-link">云数据感知</block>
   <block id="4c28f84b2cbc9460af1770270316b629" category="cell">您的数据源中的某些数据未使用进行扫描<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 确定合规性和隐私问题并寻找优化机会。</block>
   <block id="72b16307fd83023f89f6fdbe2d82b1f9" category="cell">单击此链接可启动 Data sense 并为未扫描的项目启用扫描和映射。</block>
-  <block id="153c673a2339b7123137c37da8e394e2" category="cell">您的 ONTAP 系统未加固</block>
-  <block id="5d585315f6c4c0a5ee1e800e3502dd08" category="cell">ONTAP 系统中的某些设置未按照中的建议进行设置<block ref="8d8b5d147963c1c0602add46562de9a1" category="inline-link-rx"></block>。</block>
-  <block id="f8aa88150742f7039dc7a7ef56fe7ecc" category="inline-xref">强化 ONTAP 环境面板</block>
-  <block id="cfe657a540f747c9ef00f76eed4ccdad" category="cell">单击此链接，您将重定向到 <block ref="e60df9b32c12ff1b69061e150f46f08e" category="inline-xref-macro-rx"></block> 下面，您可以调查哪个问题描述 导致警报以及如何以最佳方式修复问题描述 。</block>
   <block id="64ea11c681029425167cb44bfc5cba6b" category="section-title">按数据敏感度排名前几位的数据存储库</block>
   <block id="dbf745aed831082f2f3dce55616bd43f" category="paragraph">Top Data Repository by Sensitivity level_ 面板最多可列出包含最敏感项目的前四个数据存储库（工作环境和数据源）。每个工作环境的条形图分为：</block>
   <block id="c2587967478c7df25fe839d6f619f443" category="list-text">非敏感数据</block>
@@ -74,7 +58,6 @@
   <block id="b2f0cf77e342c8e06d6adc89839b5275" category="paragraph">单击每个区域以在 " 数据感知调查 " 页面中查看筛选后的结果，以便您可以进一步调查。</block>
   <block id="d12e8ee197943c930366883b4e6f7e46" category="section-title">域管理员组控制</block>
   <block id="1484c0ae97e3321c4dc842fb559cbdb5" category="inline-link">集成了全局 Active Directory</block>
-  <block id="c217d88768fcd834f79ac4314520e2eb" category="paragraph">域管理员组控制面板显示最近五个已添加到域管理员组中的用户，以便您可以查看是否应允许这些组中的所有用户。您必须拥有<block ref="8f7d0451e4c868ad6ef341be6b4cd177" category="inline-link-rx"></block> 进入 Cloud Data sense ，以使此面板处于活动状态。</block>
   <block id="32cb01a3a6310bb048c5fccec5ef559a" category="inline-image-macro">勒索软件保护信息板上已添加为域管理员的用户的屏幕截图。</block>
   <block id="47887aad5d32097f5b8e3d8a5be5afb3" category="paragraph"><block ref="47887aad5d32097f5b8e3d8a5be5afb3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="46419f697b5cb46833f440abb15226ec" category="paragraph">默认管理管理组包括 " 管理员 " ， " 域管理员 " ， " 企业管理员 " ， " 企业密钥管理员 " 和 " 密钥管理员 " 。</block>
@@ -91,34 +74,11 @@
   <block id="103f4c38cb312b04a9ff1c216d60872d" category="paragraph">" 已加密文件 " 面板显示经过加密的文件百分比最高的前 4 个数据源。这些通常是受密码保护的项。为此，它会比较过去 7 天的加密速率，以确定哪些数据源的增长率超过 20% 。增加此数量可能意味着勒索软件已攻击您的系统。</block>
   <block id="e1def2109874ef9469c6637b40a3ec72" category="paragraph"><block ref="e1def2109874ef9469c6637b40a3ec72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c4c9189dc37433980c8f4fd90332e76e" category="paragraph">单击其中一个数据源对应的行可在 " 数据感知调查 " 页面中查看经过筛选的结果，以便您可以进一步调查。</block>
-  <block id="ba82eec4834347b5a1b3d627cccfd0a2" category="section-title">ONTAP 系统强化状态</block>
-  <block id="2751cb6e210e14ad8dab47ab785137aa" category="paragraph">增强 ONTAP 环境 _ 面板可提供 ONTAP 系统中某些设置的状态，这些设置可根据跟踪部署的安全性<block ref="8d8b5d147963c1c0602add46562de9a1" category="inline-link-rx"></block> 和<block ref="b420a431c9b06854984942bb210b8527" category="inline-link-rx"></block> 主动检测异常活动并发出警告。</block>
-  <block id="fa89058d8368368a6a04d7b446f0b826" category="paragraph">您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。此面板目前支持内部 ONTAP 和 Cloud Volumes ONTAP 系统。</block>
-  <block id="cf883a9477c6275016bd317d9ac38844" category="inline-image-macro">勒索软件保护信息板上的 ONTAP 强化状态屏幕截图。</block>
-  <block id="da0f95ed9d75ac4d5d3b7644ac2fd0b7" category="paragraph"><block ref="da0f95ed9d75ac4d5d3b7644ac2fd0b7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bc6d33a925140a3460ad6681dc5242bc" category="paragraph">正在跟踪的设置包括：</block>
-  <block id="e9f0aaae56580f9096af03ba526b177c" category="cell">强化目标</block>
-  <block id="b8da2343c9a9a000ebabc122ea447e9f" category="cell">即装即用的反勒索软件</block>
-  <block id="668049b833f74a4da25e90299e223ec3" category="cell">已激活机载反勒索软件的卷的百分比。仅适用于内部 ONTAP 系统。绿色状态图标表示已启用超过 85% 的卷。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</block>
-  <block id="5548081e3623b5964eda1074b3e71b59" category="inline-link">了解如何在卷上启用反勒索软件</block>
-  <block id="f9afbc61d8c3f1554d8948a8072f7cca" category="cell"><block ref="f7268bd2857519dbfe5ca6442e44c926" category="inline-link-rx"></block> 使用 System Manager 。</block>
-  <block id="e8467e9b509c4924668c01eb7ab2adde" category="cell">ONTAP 版本</block>
-  <block id="482ee68d7c307f3e7c6cd4490bcd8654" category="cell">集群上安装的 ONTAP 软件版本。绿色状态图标表示此版本为最新版本。黄色图标表示集群在内部系统中落后于 1 或 2 个修补版本或 1 个次要版本，而在其他系统中则落后于 1 个主要版本。红色图标表示集群后面有 3 个修补版本， 2 个次要版本， 1 个主要版本（内部系统），后面有 2 个主要版本（其他系统）。</block>
-  <block id="0798f817dc1443dc9f38ec02333f79aa" category="inline-link">了解升级内部集群的最佳方式</block>
-  <block id="bd049a4521e272ef2c19305d5ce4e5e1" category="inline-link">您的 Cloud Volumes ONTAP 系统</block>
-  <block id="d79235cc308716db7768d40635a4ea88" category="cell"><block ref="d98b7c42d1930a18c92964de7674f038" category="inline-link-rx"></block> 或<block ref="d91596b995f2e2640fd2f126a389525d" category="inline-link-rx"></block>。</block>
-  <block id="9147e5e61a7b9260dec09f3a6eb3e5be" category="cell">快照</block>
-  <block id="fa1cc5ad543a3d3532ed24192f00dab0" category="cell">是否已在数据卷上激活快照功能，以及具有 Snapshot 副本的卷百分比。绿色状态图标表示超过 85% 的卷已启用快照。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</block>
-  <block id="9b7b2159a6726d0ae7dbb67ac30fd7ff" category="inline-link">请参见如何在内部集群上启用快照</block>
-  <block id="fed5603b3da12b224d2c5a4744d84db6" category="inline-link">在 Cloud Volumes ONTAP 系统上</block>
-  <block id="4e437ecef37249a2bc5e8df8f1ccb95e" category="cell"><block ref="4168787cb28c6a37b0cf4ca6a0660be4" category="inline-link-rx"></block> 或<block ref="d0ea607a6683a2696a3f15ac87428cb8" category="inline-link-rx"></block>。</block>
-  <block id="38f4f1ece97a1d13965a46da96aa9caf" category="paragraph">您可以单击 Cloud Backup 按钮为卷激活备份，或者单击 Data sense 按钮扫描集群上的卷以调查合规性和监管合规性。</block>
   <block id="4d18540b8dc5a99209517762449c6ad1" category="section-title">关键业务数据的权限状态</block>
   <block id="7c10a5ddc22c56c55c4495f5de3c4b58" category="paragraph">业务关键型数据权限分析面板可显示业务关键型数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。</block>
   <block id="3c55b43a850b4a36aa1cc1d65a454b37" category="inline-image-macro">勒索软件保护信息板上您正在管理的数据的权限状态屏幕截图。</block>
   <block id="5f06a8506759d69aa6bee6f9a20832c9" category="paragraph"><block ref="5f06a8506759d69aa6bee6f9a20832c9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3567ab10a436a237ecb220a3570e73e6" category="inline-link">使用 Data sense 创建策略</block>
-  <block id="172585300741c8af2f22925a7128e50f" category="paragraph">最初，此面板没有数据，因为只有在您选择了为查看最关键的业务数据而创建的 Data sense _policies_ 之后，才会填充数据。请参见操作说明<block ref="46d26f0f5777f7661fabe75b0948e8d7" category="inline-link-rx"></block>。</block>
   <block id="1bb207ad78d32d19fdc9cefbaf8c218b" category="paragraph">在此面板中添加最多 2 个策略后，此图将显示符合策略标准的所有数据的权限分析。其中列出了以下项的数量：</block>
   <block id="8ae6bb3a0525cfee738155927a6d3790" category="list-text">Open to 公有 权限— Data sense 认为对公有 开放的项</block>
   <block id="cf9aeda95b99fbd16f0e8d6a3445d6fa" category="list-text">开放给组织权限— Data sense 认为对组织开放的项</block>
@@ -137,18 +97,12 @@
   <block id="2f7d7abbde3d214eeb937dd5553d1875" category="admonition">勒索软件保护服务目前为测试版产品。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="9c0b12d94b35d04d362f66051612faa0" category="paragraph">勒索软件保护目前提供多种功能，可帮助您保护网络存储。将来还会添加其他功能。当前功能可确定何时执行以下操作：</block>
-  <block id="bdf71233b9b0efa87a2aca5c0fad260a" category="list-text">工作环境中的卷不会通过定期创建 Snapshot 副本来受到保护。</block>
   <block id="eb7d0298b4be2c1f2642a071e6afc843" category="list-text">工作环境中的卷不会通过使用创建云备份来受到保护<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>。</block>
   <block id="289085348f74317351108d3d869b6f14" category="list-text">您的工作环境和数据源中的数据不会使用进行扫描<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 确定合规性和隐私问题，并寻找优化机会。</block>
   <block id="bf4b00555794320f943c5414853d8594" category="list-text">工作环境或数据源中加密文件的百分比异常增加。</block>
   <block id="0c33ac606d324594400b19f8dfbd2320" category="paragraph">这可能表明您的网络上已开始勒索软件攻击。</block>
   <block id="9f9bf12f0d03aa6e52653dd926af3d1a" category="list-text">在文件中发现敏感数据，并且在工作环境或数据源中访问权限级别过高。</block>
   <block id="9fac98dd46ced81c05c7b657e31d52a1" category="list-text">用户已添加到 Active Directory 域管理员组。</block>
-  <block id="d5eb702421e2cc525e648eeebbdbd258" category="list-text">集群上的 ONTAP 软件版本较旧，应进行更新以提供最佳的保护和安全功能。</block>
-  <block id="51b8087986092c90540ce07ff9731763" category="list-text">ONTAP 系统未启用 NAS 文件系统审核。</block>
-  <block id="1f7c786e95d48949eb75e0f100710129" category="paragraph">启用 CIFS 审核会为系统管理员生成审核事件，用于跟踪文件夹权限更改，读取或写入文件失败尝试以及创建，修改或删除文件的时间等信息。</block>
-  <block id="8dde611eee96a2ced9961bcba422ef09" category="list-text">您的 ONTAP 系统未启用机载反勒索软件功能。</block>
-  <block id="4944c9c65fff384675d8baccb34860d8" category="paragraph">ONTAP 反勒索软件功能可以主动检测并警告可能指示勒索软件攻击的异常活动。</block>
   <block id="b0d802aefd0aaa8c7b820eb85f1572c6" category="inline-link-macro">请在勒索软件保护信息板中查看如何查看这些潜在问题。</block>
   <block id="5744098ef9fc961c062144a5e4a350e8" category="paragraph"><block ref="5744098ef9fc961c062144a5e4a350e8" category="inline-link-macro-rx"></block></block>
   <block id="67c57c1ee074a0ca2ba70d8e8697fa83" category="inline-link">了解如何针对勒索软件添加额外保护</block>
@@ -171,8 +125,6 @@
   <block id="baf7c2e288b369e60a7911ccf0d7843f" category="paragraph">勒索软件保护还会监控您的全局 Active Directory 配置（如果有）<block ref="d685621cbb53c0e90fe734b5c28a2dbe" category="inline-link-rx"></block>。</block>
   <block id="589c1e86e266a18dc3983ba51d0a031b" category="section-title">勒索软件保护的工作原理</block>
   <block id="7decc1126c0bc1b92923147bff845cde" category="paragraph">总体而言，勒索软件保护的工作原理如下：</block>
-  <block id="9ea9d90ba484137a67080a2b97132147" category="list-text">勒索软件保护会从 Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。</block>
-  <block id="5063440a7b98026cbfafe1b51817682a" category="list-text">您可以使用勒索软件保护信息板收集有关系统保护情况的概述。</block>
   <block id="ddb1029c89fa39456180abaf191e6b60" category="list-text">您可以使用提供的报告工具帮助您保护网络存储。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="bff8adc090b2fdcbd02cf502f752a260" category="paragraph">在测试期间，勒索软件保护服务不会单独产生成本。</block>
@@ -198,4 +150,12 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+  <block id="f670023c78e0e3dbeb691779659d5049" category="section-title">2022 年 3 月 15 日</block>
+  <block id="3c9974394905baea83613dc5243e802d" category="paragraph">新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。<block ref="bd1d0d25f541ccd6fe3d549035a08045" category="inline-link-rx"></block>。</block>
+  <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">2022 年 2 月 9 日</block>
+  <block id="4cbab4d1f9ed3d7e4a072ea1383b05e0" category="paragraph"><block ref="886d7dbada41cb3ce3b667c033fcccd8" category="inline-link-rx"></block>。</block>
+  <block id="206f9d17695d7880b66a22ae30ca1d40" category="paragraph">域管理员组控制面板显示已添加到域管理员组中的最新用户，以便您可以查看是否应允许这些组中的所有用户。您必须拥有<block ref="8f7d0451e4c868ad6ef341be6b4cd177" category="inline-link-rx"></block> 进入 Cloud Data sense ，以使此面板处于活动状态。</block>
+  <block id="824301188a8dca76d7a6db3ecc3d5491" category="paragraph">最初，此面板没有数据，因为只有在您选择了为查看最关键的业务数据而创建的 Data sense _policies_ 之后，才会填充数据。请参见操作说明<block ref="ca4155a1a04193934b2931c2b97d49e7" category="inline-link-rx"></block>。</block>
+  <block id="ed47a881805b813c0ec26c370ffa973f" category="list-text">勒索软件保护会从 Cloud Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。</block>
+  <block id="4c5eb95a9e7808face08edae00ea13d5" category="list-text">您可以使用勒索软件保护信息板来简要了解您的系统受到的保护程度。</block>
 </blocks>

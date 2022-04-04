@@ -26,7 +26,6 @@ TIP: 勒索软件保护服务目前为测试版产品。
 
 勒索软件保护目前提供多种功能，可帮助您保护网络存储。将来还会添加其他功能。当前功能可确定何时执行以下操作：
 
-* 工作环境中的卷不会通过定期创建 Snapshot 副本来受到保护。
 * 工作环境中的卷不会通过使用创建云备份来受到保护 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["云备份"^]。
 * 您的工作环境和数据源中的数据不会使用进行扫描 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["云数据感知"^] 确定合规性和隐私问题，并寻找优化机会。
 * 工作环境或数据源中加密文件的百分比异常增加。
@@ -35,15 +34,6 @@ TIP: 勒索软件保护服务目前为测试版产品。
 
 * 在文件中发现敏感数据，并且在工作环境或数据源中访问权限级别过高。
 * 用户已添加到 Active Directory 域管理员组。
-* 集群上的 ONTAP 软件版本较旧，应进行更新以提供最佳的保护和安全功能。
-* ONTAP 系统未启用 NAS 文件系统审核。
-+
-启用 CIFS 审核会为系统管理员生成审核事件，用于跟踪文件夹权限更改，读取或写入文件失败尝试以及创建，修改或删除文件的时间等信息。
-
-* 您的 ONTAP 系统未启用机载反勒索软件功能。
-+
-ONTAP 反勒索软件功能可以主动检测并警告可能指示勒索软件攻击的异常活动。
-
 
 
 link:task-analyze-ransomware-data.html["请在勒索软件保护信息板中查看如何查看这些潜在问题。"]
@@ -82,8 +72,8 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.
 
 总体而言，勒索软件保护的工作原理如下：
 
-. 勒索软件保护会从 Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。
-. 您可以使用勒索软件保护信息板收集有关系统保护情况的概述。
+. 勒索软件保护会从 Cloud Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。
+. 您可以使用勒索软件保护信息板来简要了解您的系统受到的保护程度。
 . 您可以使用提供的报告工具帮助您保护网络存储。
 
 
