@@ -6,6 +6,7 @@ summary: 勒索软件攻击可能会耗费业务时间，资源和声誉。通�
 ---
 = 了解勒索软件保护
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
