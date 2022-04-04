@@ -151,11 +151,11 @@
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
   <block id="f670023c78e0e3dbeb691779659d5049" category="section-title">2022 年 3 月 15 日</block>
-  <block id="3c9974394905baea83613dc5243e802d" category="paragraph">新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。<block ref="bd1d0d25f541ccd6fe3d549035a08045" category="inline-link-rx"></block>。</block>
   <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">2022 年 2 月 9 日</block>
-  <block id="4cbab4d1f9ed3d7e4a072ea1383b05e0" category="paragraph"><block ref="886d7dbada41cb3ce3b667c033fcccd8" category="inline-link-rx"></block>。</block>
   <block id="206f9d17695d7880b66a22ae30ca1d40" category="paragraph">域管理员组控制面板显示已添加到域管理员组中的最新用户，以便您可以查看是否应允许这些组中的所有用户。您必须拥有<block ref="8f7d0451e4c868ad6ef341be6b4cd177" category="inline-link-rx"></block> 进入 Cloud Data sense ，以使此面板处于活动状态。</block>
   <block id="824301188a8dca76d7a6db3ecc3d5491" category="paragraph">最初，此面板没有数据，因为只有在您选择了为查看最关键的业务数据而创建的 Data sense _policies_ 之后，才会填充数据。请参见操作说明<block ref="ca4155a1a04193934b2931c2b97d49e7" category="inline-link-rx"></block>。</block>
   <block id="ed47a881805b813c0ec26c370ffa973f" category="list-text">勒索软件保护会从 Cloud Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。</block>
   <block id="4c5eb95a9e7808face08edae00ea13d5" category="list-text">您可以使用勒索软件保护信息板来简要了解您的系统受到的保护程度。</block>
+  <block id="5816bf17c72947dceb173c559c3f6009" category="paragraph">新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。<block ref="20409d23480e4ebcd1abe3eb7cf44ef8" category="inline-link-rx"></block>。</block>
+  <block id="f8f0d5b489ad504a83a9a25f8afd6159" category="paragraph"><block ref="64dfcbf1401a338253308f53837a8af7" category="inline-link-rx"></block>。</block>
 </blocks>

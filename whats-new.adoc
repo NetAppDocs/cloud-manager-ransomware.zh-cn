@@ -23,7 +23,7 @@ summary: 了解勒索软件保护的新增功能。
 
 === 用于跟踪业务关键型数据的权限状态的新面板
 
-新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-analyze-ransomware-data.html#status-of-permissions-on-your-critical-business-data["有关详细信息，请访问此处"]。
+新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。 https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#status-of-permissions-on-your-critical-business-data["有关详细信息，请访问此处"]。
 
 
 
@@ -41,4 +41,4 @@ summary: 了解勒索软件保护的新增功能。
 
 通过全新的勒索软件保护服务，您可以查看有关网络安全的相关信息，并评估数据对网络攻击的弹性。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ransomware-protection.html["了解有关此新服务的更多信息"]。
+https://docs.netapp.com/us-en/cloud-manager-ransomware/concept-ransomware-protection.html["了解有关此新服务的更多信息"]。
