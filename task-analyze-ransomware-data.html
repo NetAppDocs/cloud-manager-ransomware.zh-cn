@@ -587,7 +587,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 08:20:01 +0000">04/18/2022</time>
+    <time datetime="2022-05-12 12:59:46 +0000">05/12/2022</time>
     
   
 
@@ -668,6 +668,21 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data sense 不会扫描数据源中的一个或多个存储库（卷，存储分段等）</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">您的数据源中的某些数据未使用进行扫描 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html" target="_blank" rel="noopener">"云数据感知"</a> 确定合规性和隐私问题并寻找优化机会。</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接可启动 Data sense 并为未扫描的项目启用扫描和映射。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">并非所有卷都在使用机载反勒索软件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">内部ONTAP 系统中的某些卷没有 <a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html" target="_blank" rel="noopener">"NetApp反勒索软件功能"</a> 已启用。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接，您将重定向到 <a href="#Status of ONTAP systems hardening">强化 ONTAP 环境面板</a> 以及使用问题描述 的工作环境。您可以在此处了解如何以最佳方式修复问题描述。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">未更新ONTAP 版本</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">集群上安装的ONTAP 软件版本不符合中的建议 <a href="https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf" target="_blank" rel="noopener">"《适用于 ONTAP 系统的 NetApp 安全加固指南》"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接，您将重定向到 <a href="#Status of ONTAP systems hardening">强化 ONTAP 环境面板</a> 以及使用问题描述 的工作环境。您可以在此处了解如何以最佳方式修复问题描述。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">未为所有卷配置快照</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">工作环境中的某些卷未通过创建卷快照来受到保护。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单击此链接，您将重定向到 <a href="#Status of ONTAP systems hardening">强化 ONTAP 环境面板</a> 以及使用问题描述 的工作环境。您可以在此处了解如何以最佳方式修复问题描述。</p></td>
 </tr>
 </tbody>
 </table>
@@ -765,6 +780,57 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="ontap-系统强化状态">ONTAP 系统强化状态</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>增强 ONTAP 环境 _ 面板可提供 ONTAP 系统中某些设置的状态，这些设置可根据跟踪部署的安全性 <a href="https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf" target="_blank" rel="noopener">"《适用于 ONTAP 系统的 NetApp 安全加固指南》"</a> 和 <a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html" target="_blank" rel="noopener">"ONTAP 防勒索软件功能"</a> 主动检测异常活动并发出警告。</p>
+</div>
+<div class="paragraph">
+<p>您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。</p>
+</div>
+<div class="paragraph">
+<p>此面板目前支持适用于NetApp ONTAP 系统的内部ONTAP 、Cloud Volumes ONTAP 和Amazon FSX。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_harden_ontap.png" alt="勒索软件保护信息板上的 ONTAP 强化状态屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>正在跟踪的设置包括：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">强化目标</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">修复</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 反勒索软件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已激活机载反勒索软件的卷的百分比。仅适用于内部 ONTAP 系统。绿色状态图标表示已启用超过 85% 的卷。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure" target="_blank" rel="noopener">"了解如何在卷上启用反勒索软件"</a> 使用 System Manager 。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 版本</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">集群上安装的 ONTAP 软件版本。绿色状态图标表示此版本为最新版本。黄色图标表示集群在内部系统中落后1或2个修补版本或1个次要版本、在Cloud Volumes ONTAP 中落后1个主要版本。红色图标表示集群后面有3个修补版本、2个次要版本、1个主要版本(内部系统)、后面有2个主要版本(Cloud Volumes ONTAP)。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/setup-upgrade/index.html" target="_blank" rel="noopener">"了解升级内部集群的最佳方式"</a> 或 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task_updating_ontap_cloud.html" target="_blank" rel="noopener">"您的 Cloud Volumes ONTAP 系统"</a>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">快照</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否已在数据卷上激活快照功能，以及具有 Snapshot 副本的卷百分比。绿色状态图标表示超过 85% 的卷已启用快照。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html" target="_blank" rel="noopener">"请参见如何在内部集群上启用卷快照"</a> 或 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task_managing_storage.html#managing-existing-volumes" target="_blank" rel="noopener">"在 Cloud Volumes ONTAP 系统上"</a>。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="关键业务数据的权限状态">关键业务数据的权限状态</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -774,10 +840,10 @@
 <p><span class="image"><img src="./media/screenshot_ransomware_critical_permissions.png" alt="勒索软件保护信息板上您正在管理的数据的权限状态屏幕截图。"></span></p>
 </div>
 <div class="paragraph">
-<p>最初，此面板没有数据，因为只有在您选择了为查看最关键的业务数据而创建的 Data sense <em>policies</em> 之后，才会填充数据。请参见操作说明 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#creating-custom-policies" target="_blank" rel="noopener">"使用 Data sense 创建策略"</a>。</p>
+<p>最初、此面板会根据选定的默认策略显示数据。但是、您可以选择创建的2个最重要的Data sense _policies_来查看最关键的业务数据。请参见操作说明 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#creating-custom-policies" target="_blank" rel="noopener">"使用 Data sense 创建策略"</a>。</p>
 </div>
 <div class="paragraph">
-<p>在此面板中添加最多 2 个策略后，此图将显示符合策略标准的所有数据的权限分析。其中列出了以下项的数量：</p>
+<p>此图显示了对符合策略标准的所有数据的权限分析。其中列出了以下项的数量：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -797,6 +863,29 @@
 </div>
 <div class="paragraph">
 <p>将鼠标悬停在图表中的每个条上可查看每个类别中的结果数。单击一个栏，此时将显示 "Data sense 调查 " 页面，以便您可以进一步调查哪些项具有打开权限，以及是否应对文件权限进行任何调整。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="关键业务数据的备份状态">关键业务数据的备份状态</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"备份状态"面板显示了如何使用Cloud Backup保护不同类别的数据。这可确定在因勒索软件攻击而需要恢复时、最重要的数据类别的备份程度如何全面。此数据直观地显示了工作环境中备份的特定类别项目的数量。</p>
+</div>
+<div class="paragraph">
+<p>此面板仅会显示已使用Cloud Backup _and_扫描功能备份的内部ONTAP 和Cloud Volumes ONTAP 工作环境。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_backups.png" alt="勒索软件保护信息板上您正在管理的数据的备份状态屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>最初、此面板会根据选定的默认类别显示数据。但是、您可以选择要跟踪的数据类别；例如、对文件、合同等进行编码。请参见的完整列表 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-categories">"类别"</a> Cloud Data sense可为您的工作环境提供这些功能。然后最多选择4个类别。</p>
+</div>
+<div class="paragraph">
+<p>填充数据后、将鼠标悬停在图表中的每个方形上、可查看从工作环境中同一类别的所有文件中备份的文件数。绿色方形表示已备份85%或以上的文件。黄色方形表示备份的文件介于40%到85%之间。红色方形表示备份的文件数不超过40%。</p>
+</div>
+<div class="paragraph">
+<p>您可以单击行末尾的Cloud Backup按钮转到Cloud Backup界面、以便在每个工作环境中的更多卷上启用备份。</p>
 </div>
 </div>
 </div>

@@ -9,14 +9,14 @@
   <meta property="og:title" content="了解勒索软件保护 | NetApp Documentation" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/cloud-manager-ransomware/concept-ransomware-protection.html" />
-	<meta property="og:description" content="勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务，您可以查看有关网络安全的相关信息，并评估数据对网络攻击的弹性。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。" />
+	<meta property="og:description" content="勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务、您可以查看有关网络安全的相关信息、并评估您的组织对网络攻击的抵御能力。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/cloud-manager-ransomware/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务，您可以查看有关网络安全的相关信息，并评估数据对网络攻击的弹性。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务、您可以查看有关网络安全的相关信息、并评估您的组织对网络攻击的抵御能力。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。">
   <meta name="keywords" content=" artificial intelligence, personal data, personal information, sensitive, personal sensitive data, data sense, ransomware, ransomware protection, cyberstorage, cyber attack, cybersecurity"><!-- Icons -->
   <link rel="icon" href="/zh-cn/cloud-manager-ransomware/images/favicon.ico" type="image/x-icon">
 
@@ -587,7 +587,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 08:20:01 +0000">04/18/2022</time>
+    <time datetime="2022-05-12 12:59:46 +0000">05/12/2022</time>
     
   
 
@@ -597,7 +597,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务，您可以查看有关网络安全的相关信息，并评估数据对网络攻击的弹性。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。</p>
+<p>勒索软件攻击可能会耗费业务时间，资源和声誉。通过勒索软件保护服务、您可以查看有关网络安全的相关信息、并评估您的组织对网络攻击的抵御能力。此外，它还会为您提供一系列警报和修复措施，帮助您提高数据的安全性。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://cloud.netapp.com/cyberstorage" target="_blank" rel="noopener">"了解勒索软件保护的用例"</a>。</p>
@@ -625,10 +625,19 @@
 <div class="ulist">
 <ul>
 <li>
+<p>工作环境中的卷不会通过定期创建 Snapshot 副本来受到保护。</p>
+</li>
+<li>
 <p>工作环境中的卷不会通过使用创建云备份来受到保护 <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html" target="_blank" rel="noopener">"云备份"</a>。</p>
 </li>
 <li>
 <p>您的工作环境和数据源中的数据不会使用进行扫描 <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html" target="_blank" rel="noopener">"云数据感知"</a> 确定合规性和隐私问题，并寻找优化机会。</p>
+<div class="paragraph">
+<p>从勒索软件保护角度来看、此功能也很重要、因为它可以让您更好地了解重要(敏感的业务关键型)数据的位置、从而确保您将保护重点放在这些数据上。</p>
+</div>
+</li>
+<li>
+<p>如果您因勒索软件攻击而需要恢复、则不会备份您最重要的数据类别。</p>
 </li>
 <li>
 <p>工作环境或数据源中加密文件的百分比异常增加。</p>
@@ -641,6 +650,15 @@
 </li>
 <li>
 <p>用户已添加到 Active Directory 域管理员组。</p>
+</li>
+<li>
+<p>集群上的 ONTAP 软件版本较旧，应进行更新以提供最佳的保护和安全功能。</p>
+</li>
+<li>
+<p>您的 ONTAP 系统未启用机载反勒索软件功能。</p>
+<div class="paragraph">
+<p>ONTAP 反勒索软件功能可以主动检测并警告可能指示勒索软件攻击的异常活动。</p>
+</div>
 </li>
 </ul>
 </div>
@@ -688,13 +706,16 @@
 <p>对象存储（使用 S3 协议）</p>
 </li>
 <li>
-<p>数据库</p>
+<p>数据库(Amazon RDS、MongoDB、MySQL、Oracle、PostgreSQL、 SAP HANA、SQL Server)</p>
 </li>
 <li>
 <p>OneDrive 帐户</p>
 </li>
 <li>
 <p>SharePoint 帐户</p>
+</li>
+<li>
+<p>Google Drive帐户</p>
 </li>
 </ul>
 </div>
@@ -712,7 +733,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>勒索软件保护会从 Cloud Data sense ， Cloud Backup 和其他 Cloud Manager 资源收集信息，以填充勒索软件保护信息板。</p>
+<p>勒索软件保护会从您的存储系统、云数据感知、Cloud Backup以及其他Cloud Manager资源中收集信息、以填充勒索软件保护信息板。</p>
 </li>
 <li>
 <p>您可以使用勒索软件保护信息板来简要了解您的系统受到的保护程度。</p>
