@@ -18,6 +18,24 @@ summary: 了解勒索软件保护的新增功能。
 
 
 
+== 2022年5月11日
+
+
+
+=== 用于跟踪 ONTAP 环境安全性强化情况的新面板。
+
+一个新面板 " 强化 ONTAP 环境 " 可提供 ONTAP 系统中某些设置的状态，用于根据跟踪部署的安全性 https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["《适用于 ONTAP 系统的 NetApp 安全加固指南》"^] 和 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP 防勒索软件功能"^] 主动检测异常活动并发出警告。
+
+您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。 https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#status-of-ontap-systems-hardening["有关详细信息，请访问此处"]。
+
+
+
+=== 新面板可显示如何使用 Cloud Backup 保护不同类别的数据。
+
+这一全新的 " 备份状态 " 面板显示了在因勒索软件攻击而需要恢复时，您最重要的数据类别的备份程度如何全面。此数据直观地展示了 Cloud Backup 在环境中备份的特定类别项目数量。 https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#backup-status-of-your-critical-business-data["有关详细信息，请访问此处"]。
+
+
+
 == 2022 年 3 月 15 日
 
 
