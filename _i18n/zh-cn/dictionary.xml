@@ -243,12 +243,10 @@
   <block id="31d81eb6324899c415d867559799335f" category="cell">集群上安装的 ONTAP 软件版本。绿色状态图标表示此版本为最新版本。黄色图标表示集群在内部系统中落后1或2个修补版本或1个次要版本、在Cloud Volumes ONTAP 中落后1个主要版本。红色图标表示集群后面有3个修补版本、2个次要版本、1个主要版本(内部系统)、后面有2个主要版本(Cloud Volumes ONTAP)。</block>
   <block id="0798f817dc1443dc9f38ec02333f79aa" category="inline-link">了解升级内部集群的最佳方式</block>
   <block id="bd049a4521e272ef2c19305d5ce4e5e1" category="inline-link">您的 Cloud Volumes ONTAP 系统</block>
-  <block id="4867a1cb8e3719b51ef967ab80e53e8f" category="cell"><block ref="ebf13e67cf6307ed02967adbb6711cdb" category="inline-link-rx"></block> 或<block ref="6150641a317e0d5077ba6e5e03ee5ee3" category="inline-link-rx"></block>。</block>
   <block id="9147e5e61a7b9260dec09f3a6eb3e5be" category="cell">快照</block>
   <block id="fa1cc5ad543a3d3532ed24192f00dab0" category="cell">是否已在数据卷上激活快照功能，以及具有 Snapshot 副本的卷百分比。绿色状态图标表示超过 85% 的卷已启用快照。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</block>
   <block id="fcb0bd0c7d52a8e69bc675e26e703a23" category="inline-link">请参见如何在内部集群上启用卷快照</block>
   <block id="fed5603b3da12b224d2c5a4744d84db6" category="inline-link">在 Cloud Volumes ONTAP 系统上</block>
-  <block id="65e047e44fd4275bef3660402ed0fc17" category="cell"><block ref="9217c403e6fe97a9a176c63ac6ba2b68" category="inline-link-rx"></block> 或<block ref="d709500d882db836e58c0872959bd621" category="inline-link-rx"></block>。</block>
   <block id="aac2820f28cdf9767df626982701f227" category="paragraph">最初、此面板会根据选定的默认策略显示数据。但是、您可以选择创建的2个最重要的Data sense _policies_来查看最关键的业务数据。请参见操作说明<block ref="ca4155a1a04193934b2931c2b97d49e7" category="inline-link-rx"></block>。</block>
   <block id="d7a430aef362e0674d0e4f46cc4e0826" category="paragraph">此图显示了对符合策略标准的所有数据的权限分析。其中列出了以下项的数量：</block>
   <block id="01238444606a763f352d68cd714ac7c9" category="section-title">关键业务数据的备份状态</block>
@@ -260,4 +258,7 @@
   <block id="f6c10502779e9890e96477c5311d212f" category="paragraph">最初、此面板会根据选定的默认类别显示数据。但是、您可以选择要跟踪的数据类别；例如、对文件、合同等进行编码。请参见的完整列表<block ref="cffd3331f5cb204084a40331444df4fd" category="inline-link-rx"></block> Cloud Data sense可为您的工作环境提供这些功能。然后最多选择4个类别。</block>
   <block id="d6eb5dc1abeab0ff34111bbaa52c3db3" category="paragraph">填充数据后、将鼠标悬停在图表中的每个方形上、可查看从工作环境中同一类别的所有文件中备份的文件数。绿色方形表示已备份85%或以上的文件。黄色方形表示备份的文件介于40%到85%之间。红色方形表示备份的文件数不超过40%。</block>
   <block id="cd78e0c0868be8e03c054039b311a66c" category="paragraph">您可以单击行末尾的Cloud Backup按钮转到Cloud Backup界面、以便在每个工作环境中的更多卷上启用备份。</block>
+  <block id="c520be19d736e28ac258be212caaa6a5" category="cell"><block ref="ebf13e67cf6307ed02967adbb6711cdb" category="inline-link-rx"></block> 或<block ref="57f03f2d814ee68f8cab383ca5276240" category="inline-link-rx"></block>。</block>
+  <block id="b9de0627ae5b338bc6c5d66e26fd1ebc" category="inline-link">在适用于ONTAP 的FSX系统上</block>
+  <block id="3b87b8dcbc175954773151e5cdbe57d2" category="cell"><block ref="9217c403e6fe97a9a176c63ac6ba2b68" category="inline-link-rx"></block>或<block ref="a83b33f58a6c49ebc8dc0bebb61ff0e7" category="inline-link-rx"></block>或<block ref="655b9f4a8bcbab74e9e21d268c925508" category="inline-link-rx"></block>。</block>
 </blocks>
