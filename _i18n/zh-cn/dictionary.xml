@@ -91,7 +91,6 @@
   <block id="effbb336e45f46d581aeda0855b4f075" category="paragraph"><block ref="1d0e1a8a3aab3560b76f73789d114aca" category="inline-link-rx"></block>。</block>
   <block id="2f7d7abbde3d214eeb937dd5553d1875" category="admonition">勒索软件保护服务目前为测试版产品。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
-  <block id="9c0b12d94b35d04d362f66051612faa0" category="paragraph">勒索软件保护目前提供多种功能，可帮助您保护网络存储。将来还会添加其他功能。当前功能可确定何时执行以下操作：</block>
   <block id="eb7d0298b4be2c1f2642a071e6afc843" category="list-text">工作环境中的卷不会通过使用创建云备份来受到保护<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>。</block>
   <block id="289085348f74317351108d3d869b6f14" category="list-text">您的工作环境和数据源中的数据不会使用进行扫描<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 确定合规性和隐私问题，并寻找优化机会。</block>
   <block id="bf4b00555794320f943c5414853d8594" category="list-text">工作环境或数据源中加密文件的百分比异常增加。</block>
@@ -126,7 +125,6 @@
   <block id="3d6eff6991e5216e6290ee43be3ac04a" category="doc">勒索软件保护文档</block>
   <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在向 NetApp 技术支持创建支持案例之前，您需要先将 NetApp 支持站点帐户添加到 Cloud Manager 中，然后注册获取支持。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">注册以获得支持</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
   <block id="8aa5491f5b5232be0b1b2e9832e6ee88" category="sidebar">勒索软件保护文档</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
@@ -147,8 +145,6 @@
   <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">2022 年 2 月 9 日</block>
   <block id="206f9d17695d7880b66a22ae30ca1d40" category="paragraph">域管理员组控制面板显示已添加到域管理员组中的最新用户，以便您可以查看是否应允许这些组中的所有用户。您必须拥有<block ref="8f7d0451e4c868ad6ef341be6b4cd177" category="inline-link-rx"></block> 进入 Cloud Data sense ，以使此面板处于活动状态。</block>
   <block id="4c5eb95a9e7808face08edae00ea13d5" category="list-text">您可以使用勒索软件保护信息板来简要了解您的系统受到的保护程度。</block>
-  <block id="5816bf17c72947dceb173c559c3f6009" category="paragraph">新的 " 业务关键型数据权限分析 " 面板显示了对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。<block ref="20409d23480e4ebcd1abe3eb7cf44ef8" category="inline-link-rx"></block>。</block>
-  <block id="f8f0d5b489ad504a83a9a25f8afd6159" category="paragraph"><block ref="64dfcbf1401a338253308f53837a8af7" category="inline-link-rx"></block>。</block>
   <block id="aeaeee19a7c393222e407a525cf01991" category="section-title">添加 NSS 帐户</block>
   <block id="de2241fea60d98698faaa196ff73ee80" category="paragraph">通过支持信息板，您可以从一个位置添加和管理所有 NetApp 支持站点帐户。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
@@ -214,10 +210,8 @@
   <block id="55a52ff3da54b1be61be4ffbf282e94a" category="section-title">用于跟踪 ONTAP 环境安全性强化情况的新面板。</block>
   <block id="9c7ce6244ca9eb3215d61dd69afa3325" category="inline-link">《适用于 ONTAP 系统的 NetApp 安全加固指南》</block>
   <block id="3380ed6ae32f99410860532de07b57a7" category="inline-link">ONTAP 防勒索软件功能</block>
-  <block id="c0920e0c17ca7e741f375b33ea0a761b" category="paragraph">一个新面板 " 强化 ONTAP 环境 " 可提供 ONTAP 系统中某些设置的状态，用于根据跟踪部署的安全性<block ref="060f8a2b53a60ac49c67caafaf5b129f" category="inline-link-rx"></block> 和<block ref="0be7bd5b5f280e211653a4c6e05c11a6" category="inline-link-rx"></block> 主动检测异常活动并发出警告。</block>
   <block id="914a5a27ea412edf84bb416054ec6d75" category="paragraph">您可以查看这些建议，然后确定希望如何解决潜在问题。您可以按照以下步骤更改集群上的设置，将更改推迟到其他时间或忽略此建议。<block ref="87553c653b94d5529a2080374ec70030" category="inline-link-rx"></block>。</block>
   <block id="76553642514a4b204c12afe14df42e92" category="section-title">新面板可显示如何使用 Cloud Backup 保护不同类别的数据。</block>
-  <block id="c55588bedd5ed04bd522d770a0c3de70" category="paragraph">这一全新的 " 备份状态 " 面板显示了在因勒索软件攻击而需要恢复时，您最重要的数据类别的备份程度如何全面。此数据直观地展示了 Cloud Backup 在环境中备份的特定类别项目数量。<block ref="eddc9c9a841fbf81e5d5b5a19c7e11a3" category="inline-link-rx"></block>。</block>
   <block id="5592b65ac68ee08e7e4d72e1db4c8c57" category="cell">并非所有卷都在使用机载反勒索软件</block>
   <block id="3e4cd8785a12dd4af37c0d4961022f96" category="inline-link">NetApp反勒索软件功能</block>
   <block id="7aa34ccd4933956082a1db1a1dcb9386" category="cell">内部ONTAP 系统中的某些卷没有<block ref="c430ca7dfd9bb0dbfe1053348a62639f" category="inline-link-rx"></block> 已启用。</block>
@@ -261,4 +255,27 @@
   <block id="c520be19d736e28ac258be212caaa6a5" category="cell"><block ref="ebf13e67cf6307ed02967adbb6711cdb" category="inline-link-rx"></block> 或<block ref="57f03f2d814ee68f8cab383ca5276240" category="inline-link-rx"></block>。</block>
   <block id="b9de0627ae5b338bc6c5d66e26fd1ebc" category="inline-link">在适用于ONTAP 的FSX系统上</block>
   <block id="3b87b8dcbc175954773151e5cdbe57d2" category="cell"><block ref="9217c403e6fe97a9a176c63ac6ba2b68" category="inline-link-rx"></block>或<block ref="a83b33f58a6c49ebc8dc0bebb61ff0e7" category="inline-link-rx"></block>或<block ref="655b9f4a8bcbab74e9e21d268c925508" category="inline-link-rx"></block>。</block>
+  <block id="f8c7ea9d64a54c9a1eb4c1cbc5ef066e" category="section-title">2022年6月12日</block>
+  <block id="ee4612ccbf2c1a0b8e01a1dc2992487f" category="section-title">现在、系统将跟踪ONTAP Storage VM的NAS文件系统审核状态</block>
+  <block id="9e0f0ecbfec67c585b4269b113f30ee3" category="paragraph">如果工作环境中启用了文件系统审核的Storage VM少于40%、则会向_Cyber Resilience Map_添加警报。您可以在_harden your ONTAP environment_面板中查看未跟踪SMB和NFS事件并将其记录到审核日志中的确切SVM数。然后、您可以决定是否对这些SVM启用审核。</block>
+  <block id="9f8d82fd59d602cd8a59ae988c97d5e6" category="section-title">现在、如果您的卷未启用机载反勒索软件、则会显示警报</block>
+  <block id="5e75c953b6169be120d3ab03b8f54b15" category="paragraph">先前在_harden your ONTAP Environments_panel中为内部ONTAP 系统报告了此信息、 但现在、当在40%以下的卷中启用了机载反勒索软件功能时、_Cyber Resilience Map_中会报告一条警报、因此您可以在信息板中查看此信息。</block>
+  <block id="cc1796d3f81dc9429436a972e383c713" category="section-title">现在、可跟踪适用于ONTAP 系统的FSX以启用卷快照</block>
+  <block id="e59924af0c76a1072bb2a4cb349960b8" category="paragraph">现在、增强ONTAP 环境_面板可提供适用于ONTAP 系统的FSx上卷的Snapshot副本状态。如果不到40%的卷受快照保护、您还会在_Cyber Resilience Map_中收到警报。</block>
+  <block id="5e5a2d8b7f4ac8723d3873b0ba14916e" category="paragraph">一个新面板_harden your ONTAP Environments_可 提供ONTAP 系统中某些设置的状态、用于根据跟踪部署的安全性<block ref="060f8a2b53a60ac49c67caafaf5b129f" category="inline-link-rx"></block> 和<block ref="0be7bd5b5f280e211653a4c6e05c11a6" category="inline-link-rx"></block> 主动检测异常活动并发出警告。</block>
+  <block id="ed35eae63358acfc6c38aefc0b7736d0" category="paragraph">此全新的_Backup Status_面板显示了在因勒索软件攻击而需要恢复时、您最重要的数据类别的备份程度如何全面。此数据直观地展示了 Cloud Backup 在环境中备份的特定类别项目数量。<block ref="eddc9c9a841fbf81e5d5b5a19c7e11a3" category="inline-link-rx"></block>。</block>
+  <block id="f0affd41380a1f75f1e8cb0eb63a3746" category="paragraph">新的"业务关键型数据权限分析"面板可显示对您的业务至关重要的数据的权限状态。这样，您就可以快速评估业务关键型数据的保护情况。<block ref="20409d23480e4ebcd1abe3eb7cf44ef8" category="inline-link-rx"></block>。</block>
+  <block id="07af92e755dcb6b8c74060d22fcc7077" category="paragraph"><block ref="12a8d1a9d44e422c8f9c04ab83945381" category="inline-link-macro-rx"></block>。</block>
+  <block id="2b7793f2050536702cffe75f1afedd67" category="paragraph">使用Cloud Manager勒索软件保护信息板查看所有工作环境和数据源的网络弹性概况。您可以深入查看每个区域，以了解更多详细信息和可能的修复方法。</block>
+  <block id="c4839802587ac50cbe60ffdc49b98465" category="cell">并非所有SVM都启用文件操作审核</block>
+  <block id="112dc676159587048198f85964d6516d" category="cell">工作环境中的某些Storage VM未启用文件系统审核。建议您跟踪用户对文件执行的操作。</block>
+  <block id="2a616a7e873712e5b6e2b2ace9afd42d" category="cell">单击此链接，您将重定向到 <block ref="e60df9b32c12ff1b69061e150f46f08e" category="inline-xref-macro-rx"></block> 以及使用问题描述 的工作环境。您可以在此处调查是否需要在SVM上启用NAS审核。</block>
+  <block id="e4a37f02d326b41feca29ff24384dfc1" category="cell">NAS审核</block>
+  <block id="26644e590b6e93e56b7eb402dd7184d7" category="cell">启用了文件系统审核的Storage VM的数量。绿色状态图标表示超过85%的SVM已启用NAS文件系统审核。黄色表示已启用 40-85% 。红色表示已启用 &lt; 40% 。</block>
+  <block id="c6310b0082711c2ecff8665c858d4349" category="inline-link">请参见如何在SVM上启用NAS审核</block>
+  <block id="4f1efe1bb089b60d7f12a798fbc657ac" category="cell"><block ref="5008c18083c6348e863173af351120f7" category="inline-link-rx"></block> 使用命令行界面。</block>
+  <block id="d79e9c50c54d2d70bdf5777d13357ae9" category="paragraph">勒索软件保护提供了单一的可见性和控制点、可用于管理和完善不同工作环境和基础架构层的数据安全性、以便更好地应对发生的威胁。它目前提供多种功能、可帮助您保护网络存储。将来还会添加其他功能。当前功能可确定何时执行以下操作：</block>
+  <block id="51b8087986092c90540ce07ff9731763" category="list-text">ONTAP 系统未启用 NAS 文件系统审核。</block>
+  <block id="1f7c786e95d48949eb75e0f100710129" category="paragraph">启用 CIFS 审核会为系统管理员生成审核事件，用于跟踪文件夹权限更改，读取或写入文件失败尝试以及创建，修改或删除文件的时间等信息。</block>
+  <block id="23d8e653f2d8934c45e811223bcdf92b" category="sidebar">查看ONTAP 系统防范勒索软件的安全性</block>
 </blocks>
